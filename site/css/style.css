@@ -27,26 +27,58 @@ body {
   height: 100%;
   padding-bottom: 14%;
   background: url(../images/hero.png) bottom center no-repeat;
-  background-size: 80%; }
+  background-size: 80%;
+  /*
+  	@media screen and (min-width: 521px) {
+  		@media screen and (max-width: 759px) {
+  		//	background: none;
+  		//	.searchbar {
+  		//      display: none;
+  		//	}
+  
+  		.my-info {
+  			text-align: left;   // changed from center to left
+  			padding: $padding*3 0;
+  			margin: 10px;    // my change
+  
+  			.portfolio-image {
+  				border-radius: 50%;
+  				float: left;  // new added
+  				padding-bottom: 30px; //new added
+  
+  			}
+  
+  			h1, h2 {
+  				font-weight: normal;
+  				//float: left;   // new added
+  			//	display: inline-block;  // new added 
+  			}
+  
+  			h1 {
+  				font-size: 160%;
+  				padding-right: 50px;  //new added
+  
+  			}
+  
+  			h2 {
+  				font-size: 100%;
+  				//padding: 0 $padding *2;  // removed
+  				//display: inline-block;
+  				text-align: left;  // new added
+  				margin-left: 0;   // new added
+  				//display: inline-block;
+  
+  			}
+  
+  	
+  
+  	}
+  }
+  */ }
   @media screen and (min-width: 760px) {
     .sidebar {
       float: left;
       width: 20%; } }
-  @media screen and (max-width: 520px) {
-    .sidebar {
-      background: none; }
-      .sidebar .searchbar {
-        display: none; } }
-  @media screen and (max-width: 760px) {
-    .sidebar {
-      background: none; }
-      .sidebar .searchbar {
-        display: none; } }
-  @media screen and (max-width: 360px) {
-    .sidebar {
-      background: none; }
-      .sidebar .searchbar {
-        display: none; } }
   .sidebar .my-info {
     text-align: center;
     padding: 30px 0; }
@@ -59,10 +91,70 @@ body {
     .sidebar .my-info h2 {
       font-size: 100%;
       padding: 0 10px; }
+  @media screen and (max-width: 760px) {
+    .sidebar {
+      background: none; } }
+  @media screen and (max-width: 520px) {
+    .sidebar {
+      background: none; }
+      .sidebar .searchbar {
+        display: none; }
+      .sidebar .my-info {
+        text-align: left;
+        padding: 30px 0;
+        margin: 10px; }
+        .sidebar .my-info .portfolio-image {
+          border-radius: 50%;
+          float: left;
+          padding-bottom: 30px; }
+        .sidebar .my-info h1, .sidebar .my-info h2 {
+          font-weight: normal; }
+        .sidebar .my-info h1 {
+          font-size: 160%;
+          padding-right: 50px; }
+        .sidebar .my-info h2 {
+          font-size: 100%;
+          text-align: left;
+          margin-left: 0; } }
+  @media screen and (max-width: 360px) {
+    .sidebar {
+      background: none; }
+      .sidebar .searchbar {
+        display: none; }
+      .sidebar .my-info {
+        text-align: left;
+        padding: 30px 0;
+        margin: 10px; }
+        .sidebar .my-info .portfolio-image {
+          border-radius: 50%;
+          float: left;
+          padding-bottom: 30px; }
+        .sidebar .my-info h1, .sidebar .my-info h2 {
+          font-weight: normal;
+          display: inline; }
+        .sidebar .my-info h1 {
+          font-size: 160%;
+          padding-right: 150px; }
+        .sidebar .my-info h2 {
+          font-size: 100%;
+          text-align: left;
+          margin-left: 0; } }
 
 .social {
   width: 120px;
   margin: 0 auto; }
+  @media screen and (max-width: 360px) {
+    .social {
+      margin: -50px 10px 10px 30px;
+      padding-top: -20px; } }
+  @media screen and (max-width: 520px) {
+    .social {
+      margin: -50px 10px 10px 30px;
+      padding-top: -20px; } }
+  @media screen and (max-width: 760px) {
+    .social {
+      margin: -50px 10px 10px 30px;
+      padding-top: -20px; } }
   .social a {
     float: left;
     width: 25px;

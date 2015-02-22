@@ -23,7 +23,6 @@ $break-four: 1050px;
 $break-three: 760px;
 $break-two: 520px;
 $break-one: 360px;
-$break-range: 521px 759px;
 
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900');
 @import url('normalize.css');
@@ -63,24 +62,44 @@ body {
 	background: url(../images/hero.png) bottom center no-repeat;
 	background-size: 80%;
 
-
 	@media screen and (min-width: $break-three) {
 		float: left;
 		width: 20%;
 		
 	}
-	
+@media screen and (max-width: $break-two) {
+		background: none;
+		.searchbar {
+	      display: none;
+		}
+	}
+@media screen and (max-width: $break-three) {
+		background: none;
+		.searchbar {
+	      display: none;
+		}
+	}
+@media screen and (max-width: $break-one) {
+		background: none;
+		.searchbar {
+	      display: none;
+		}
+	}
+
 	.my-info {
-		text-align: center;   
+		text-align: left;   // changed from center to left
 		padding: $padding*3 0;
-		
+		margin: 10px;    // my change
+
 		.portfolio-image {
 			border-radius: 50%;
-			
+			float: left;  // new added
 		}
 
 		h1, h2 {
-			font-weight: normal;	
+			font-weight: normal;
+			//float: left;   // new added
+			display: inline;  // new added 
 		}
 
 		h1 {
@@ -94,188 +113,20 @@ body {
 
 	}
 
-
-// this is where the break tests should go - after default
-//  min-width doesn't work!
-
-	@media screen and (max-width: $break-three) {
-		 
-			background: none;
-		//	.searchbar {
-		//      display: none;
-	}
-/*
-	@media screen and (min-width: 521px) {
-		@media screen and (max-width: 759px) {
-		//	background: none;
-		//	.searchbar {
-		//      display: none;
-		//	}
-
-		.my-info {
-			text-align: left;   // changed from center to left
-			padding: $padding*3 0;
-			margin: 10px;    // my change
-
-			.portfolio-image {
-				border-radius: 50%;
-				float: left;  // new added
-				padding-bottom: 30px; //new added
-
-			}
-
-			h1, h2 {
-				font-weight: normal;
-				//float: left;   // new added
-			//	display: inline-block;  // new added 
-			}
-
-			h1 {
-				font-size: 160%;
-				padding-right: 50px;  //new added
-
-			}
-
-			h2 {
-				font-size: 100%;
-				//padding: 0 $padding *2;  // removed
-				//display: inline-block;
-				text-align: left;  // new added
-				margin-left: 0;   // new added
-				//display: inline-block;
-
-			}
-
-	
-
-	}
 }
-*/
 
-	@media screen and (max-width: $break-two) {
-		background: none;
-		.searchbar {
-	      display: none;
-		}
-
-		.my-info {
-			text-align: left;   // changed from center to left
-			padding: $padding*3 0;
-			margin: 10px;    // my change
-
-			.portfolio-image {
-				border-radius: 50%;
-				float: left;  // new added
-				padding-bottom: 30px; //new added
-
-			}
-
-			h1, h2 {
-				font-weight: normal;
-				//float: left;   // new added
-			//	display: inline-block;  // new added 
-			}
-
-			h1 {
-				font-size: 160%;
-				padding-right: 50px;  //new added
-
-			}
-
-			h2 {
-				font-size: 100%;
-				//padding: 0 $padding *2;  // removed
-				//display: inline-block;
-				text-align: left;  // new added
-				margin-left: 0;   // new added
-				//display: inline-block;
-
-
-			}
-
-		}
-
-	}
-	
-
-	@media screen and (max-width: $break-one) {
-			background: none;
-			.searchbar {
-		      display: none;
-			}
-	
-			.my-info {
-				text-align: left;   // changed from center to left
-				padding: $padding*3 0;
-				margin: 10px;    // my change
-
-				.portfolio-image {
-					border-radius: 50%;
-					float: left;  // new added
-					padding-bottom: 30px; //new added
-				}
-
-				h1, h2 {
-					font-weight: normal;
-					//float: left;   // new added
-					display: inline;  // new added 
-				}
-
-				h1 {
-					font-size: 160%;
-					padding-right: 150px;  //new added
-
-
-				}
-
-				h2 {
-					font-size: 100%;
-				//	padding: 0 $padding; // removed
-					text-align: left;  // new added
-					margin-left: 0;   // new added
-				//	display: inline-block;
-
-
-				}
-
-			}
-
-		}
-
-
-}
 
 // social media links
 
 .social {
 	width: 120px;
-	margin: 0 auto;  
-
-	@media screen and (max-width: $break-one) {
-		margin: -50px 10px 10px 30px;   // new added
-		padding-top: -20px;   // new added
-	}
-
-	@media screen and (max-width: $break-two) {
-		margin: -50px 10px 10px 30px;   // new added
-		padding-top: -20px;   // new added
-
-	//	padding-right: 20px;   // new added
-	}
-	@media screen and (max-width: $break-three) {
-		margin: -50px 10px 10px 30px;   // new added
-		padding-top: -20px;   // new added
-
-	//	padding-right: 20px;   // new added
-	}
-
+	margin: 0 auto;
 
 	a {
 		float: left;
 		width: 25px;
 		height: 25px;
 		margin: 0 $margin/5;
-
 		background: url(images/social-media.png) no-repeat;
 		text-indent: -9999px;
 
