@@ -23,7 +23,7 @@ $break-four: 1050px;
 $break-three: 760px;
 $break-two: 520px;
 $break-one: 360px;
-$break-range: 521px 759px;
+$break-range: 521px,759px;
 
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900');
 @import url('normalize.css');
@@ -63,19 +63,20 @@ body {
 	background: url(../images/hero.png) bottom center no-repeat;
 	background-size: 80%;
 
-
-	@media screen and (min-width: $break-three) {
+//	@media screen and (min-width: $break-three) {
+	@media screen and (min-width: $break-two + 1) {
 		float: left;
 		width: 20%;
 		
 	}
-	
+
 	.my-info {
 		text-align: center;   
 		padding: $padding*3 0;
 		
 		.portfolio-image {
 			border-radius: 50%;
+		//	margin-right: 10px;  //new added
 			
 		}
 
@@ -98,60 +99,16 @@ body {
 // this is where the break tests should go - after default
 //  min-width doesn't work!
 
-	@media screen and (max-width: $break-three) {
-		 
+	@media screen and (max-width: $break-three) {	 
 			background: none;
 		//	.searchbar {
 		//      display: none;
+		//float: left;
+		//width: 20%;
+		
 	}
-/*
-	@media screen and (min-width: 521px) {
-		@media screen and (max-width: 759px) {
-		//	background: none;
-		//	.searchbar {
-		//      display: none;
-		//	}
-
-		.my-info {
-			text-align: left;   // changed from center to left
-			padding: $padding*3 0;
-			margin: 10px;    // my change
-
-			.portfolio-image {
-				border-radius: 50%;
-				float: left;  // new added
-				padding-bottom: 30px; //new added
-
-			}
-
-			h1, h2 {
-				font-weight: normal;
-				//float: left;   // new added
-			//	display: inline-block;  // new added 
-			}
-
-			h1 {
-				font-size: 160%;
-				padding-right: 50px;  //new added
-
-			}
-
-			h2 {
-				font-size: 100%;
-				//padding: 0 $padding *2;  // removed
-				//display: inline-block;
-				text-align: left;  // new added
-				margin-left: 0;   // new added
-				//display: inline-block;
-
-			}
 
 	
-
-	}
-}
-*/
-
 	@media screen and (max-width: $break-two) {
 		background: none;
 		.searchbar {
@@ -160,7 +117,10 @@ body {
 
 		.my-info {
 			text-align: left;   // changed from center to left
-			padding: $padding*3 0;
+			//padding: $padding*3 0;
+			padding: $padding*2 0;
+			//padding: $padding*2 10px;
+
 			margin: 10px;    // my change
 
 			.portfolio-image {
@@ -184,8 +144,6 @@ body {
 
 			h2 {
 				font-size: 100%;
-				//padding: 0 $padding *2;  // removed
-				//display: inline-block;
 				text-align: left;  // new added
 				margin-left: 0;   // new added
 				//display: inline-block;
@@ -194,52 +152,50 @@ body {
 		}
 
 	}
-	
+
 	@media screen and (max-width: $break-one) {
 			background: none;
 			.searchbar {
 		      display: none;
 			}
 	
-			.my-info {
-				text-align: left;   // changed from center to left
-				padding: $padding*3 0;
-				margin: 10px;    // my change
+		.my-info {
+			text-align: left;   // changed from center to left
+			padding: $padding*3 0;
+		//	padding: $padding*3 10px;
+			margin: 10px;    // my change
 
-				.portfolio-image {
-					border-radius: 50%;
-					float: left;  // new added
-					padding-bottom: 30px; //new added
-				}
+			.portfolio-image {
+				border-radius: 50%;
+				float: left;  // new added
+				padding-bottom: 30px; //new added
+			}
 
-				h1, h2 {
-					font-weight: normal;
-					//float: left;   // new added
-					display: inline;  // new added 
-				}
+			h1, h2 {
+				font-weight: normal;
+				//float: left;   // new added
+				display: inline;  // new added 
+			}
 
-				h1 {
-					font-size: 160%;
-					padding-right: 150px;  //new added
-
-
-				}
-
-				h2 {
-					font-size: 100%;
-				//	padding: 0 $padding; // removed
-					text-align: left;  // new added
-					margin-left: 0;   // new added
-				//	display: inline-block;
+			h1 {
+				font-size: 160%;
+				padding-right: 150px;  //new added
 
 
-				}
+			}
+
+			h2 {
+				font-size: 100%;
+			//	padding: 0 $padding; // removed
+				text-align: left;  // new added
+				margin-left: 0;   // new added
+			//	display: inline-block;
 
 			}
 
 		}
 
-
+	}
 }
 
 // social media links
@@ -248,22 +204,26 @@ body {
 	width: 120px;
 	margin: 0 auto;  
 
+
 	@media screen and (max-width: $break-one) {
-		margin: -50px 10px 10px 30px;   // new added
-		padding-top: -20px;   // new added
+		margin: 0px 50px 10px 10px;   // new added
+		//padding-top: -60px;   // new added
+		//padding-right: 10px;   // new added
 	}
 
 	@media screen and (max-width: $break-two) {
-		margin: -50px 10px 10px 30px;   // new added
-		padding-top: -20px;   // new added
+		margin: 0px 50px 10px 10px;   // new added
+		//padding-top: -60px;   // new added
+		//padding-right: 10px;   // new added
 
-	//	padding-right: 20px;   // new added
+
 	}
 	@media screen and (max-width: $break-three) {
-		margin: -50px 10px 10px 30px;   // new added
-		padding-top: -20px;   // new added
+		margin: 0px 50px 10px 10px;   // new added
+		//padding-top: -60px;   // new added
+		//padding-right: 10px;   // new added
 
-	//	padding-right: 20px;   // new added
+
 	}
 
 
@@ -322,11 +282,15 @@ body {
 }
 // left side menus
 .menus {
-	text-align: center;
+	//text-align: center;
+	text-align: left;
+	margin-left: 20px;
 
 	@media screen and (min-width: $break-three) {
 		padding: $padding*2 $padding*3;
+		//text-align: center;  //new added
 	}
+
 
 	h3 {
 		text-transform: uppercase;
@@ -339,19 +303,47 @@ body {
 
 		@media screen and (min-width: $break-one) {
 			margin: $margin*2 auto $margin*2;
+			//text-align: left;  //new added
+
 		}
 
 		@media screen and (min-width: $break-three) {
 			margin: $margin*2 0 $margin 0;
+			//text-align: left;  //new added
+
+		}
+// add new - spacing is controlled by pseudo group after selector
+// therefore all margin & padding don't work as expected
+		@media screen and (max-width: $break-three) {
+			display: inline;
+		//	text-align: left;
+			margin-right: 5px;
+			//padding-left: -20px;
+			//margin-top: -20px;
+			//padding-top: -20px;  //new
 		}
 
 		@media screen and (max-width: $break-two) {
 			display: inline;
+			//text-align: left;
+
 			margin-right: 5px;
+			//padding-left: -20px;
+
+			//margin-top: -20px;
+			//padding-top: -20px;  //new
+
+
 		}
 		@media screen and (max-width: $break-one) {
 			display: inline;
+		//	text-align: left;
+
 			margin-right: 5px;
+			//padding-left: -20px;
+
+			//margin-top: -20px;
+			//padding-top: -20px;  //new
 
 		}
 
@@ -451,10 +443,18 @@ ul {
 // main content
 .content {
 	width: 100%;
+//	width: 80%; // changed from 100
+//	float: left; // new added
 	min-height: 100%;
 	background: $white;
 
 	@media screen and (min-width: $break-three) {
+		float: left;
+		width: 80%;
+	}
+	
+//added new
+	@media screen and (min-width: 521px) and (max-width: 759px) {
 		float: left;
 		width: 80%;
 	}
